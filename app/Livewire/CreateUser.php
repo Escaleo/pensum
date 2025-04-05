@@ -7,13 +7,12 @@ use Livewire\Component;
 
 class CreateUser extends Component
 {
-
-    
+    public $open = false;
     public $name, $ci_card, $email, $city, $address, $phone, $username, $password;
 
     public function create()
     {
-
+        
         User::create([
             'name'     => $this->name,
             'ci_card'  => $this->ci_card,
@@ -23,7 +22,6 @@ class CreateUser extends Component
             'phone'    => $this->phone,
             'username' => $this->username,
             'password' => $this->password,
-
         ]);
 
 
@@ -45,6 +43,6 @@ class CreateUser extends Component
 
     public function render()
     {
-        return view('livewire.create-user');
+        return view('livewire.create-user')->with('open');
     }
 }

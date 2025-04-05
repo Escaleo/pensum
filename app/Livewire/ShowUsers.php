@@ -9,7 +9,7 @@ class ShowUsers extends Component
     protected $listeners = ['render' => 'render'];
     public $search;
     public $sort = 'id';
-    public $dir  = 'asc';
+    public $dir  = 'desc';
 
     public function order($sort)
     {

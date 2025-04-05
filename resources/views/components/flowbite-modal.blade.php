@@ -1,4 +1,5 @@
-<div><button id="id_add_user" data-modal-target="crud-modal" data-modal-toggle="crud-modal" type="button"
+<div >
+  <button id="id_add_user" data-modal-target="crud-modal" data-modal-toggle="crud-modal" type="button"
     class="flex focus:outline-none text-gray-300 bg-blue-900 hover:bg-blue-800 font-medium rounded-lg text-sm px-2 py-1.5 "><svg
       class="w-5 h-5 text-gray-800 dark:text-gray-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
       height="24" fill="none" viewBox="0 0 24 24">
@@ -31,7 +32,7 @@
           </button>
         </div>
         <!-- Modal body -->
-        <form  id="id_form_add_user" class="p-4 md:p-5">
+        <form id="id_form_add_user" class="p-4 md:p-5">
           @csrf
           <div class="grid gap-4 mb-4 grid-cols-2">
             <div class="col-span-1">
@@ -104,7 +105,7 @@
             </div>
 
           </div>
-          <button type="button" wire:click="create" 
+          <button type="button" wire:click="create"
             class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd"
@@ -116,5 +117,6 @@
         </form>
       </div>
     </div>
-  </di>
+    </di>
+  </div>
 </div>

@@ -4,9 +4,11 @@ namespace App\Http\Requests;
 
 use App\Models\User;
 use Doctrine\Inflector\Rules\English\Rules;
+use Illuminate\Auth\Passwords\PasswordBroker;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Password as RulesPassword;
 
 class registerUser extends FormRequest
 {
@@ -33,7 +35,7 @@ class registerUser extends FormRequest
             'phone'    => ['required', 'int'], 'unique:' . User::class,
             'email'    => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'username' => ['required', 'string', 'max:255', 'unique:' . User::class],
-            'password' => ['required', 'confirmed', Password::defaults()],
+            'password' => ['required', Password::defaults()],
         ];
     }
 }
